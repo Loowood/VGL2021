@@ -2648,6 +2648,7 @@ Transform:
   - {fileID: 1601192905}
   m_Father: {fileID: 0}
   m_RootOrder: 14
+<<<<<<< Updated upstream
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1869903170
 GameObject:
@@ -2820,6 +2821,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 19
+=======
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1934206645 stripped
 Transform:
