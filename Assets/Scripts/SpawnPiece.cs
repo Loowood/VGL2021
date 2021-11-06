@@ -5,8 +5,6 @@ using UnityEngine;
 public class SpawnPiece : MonoBehaviour
 {
     public GameObject pieceToSpawn;
-    public bool posAleatoire = false;
-
     public float leftestPos = -4f;
     public float rightestPos = 4f;
     public bool moveRight = true;
@@ -26,18 +24,7 @@ public class SpawnPiece : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && JetonManager.instance.getNbJetons() > 0)
         {
-            Debug.Log("space");
-            if (posAleatoire)
-            {
-                Debug.Log("instance alea");
-                Instantiate(pieceToSpawn, gameObject.transform.position + new Vector3(Random.Range(leftestPos, rightestPos), 0f, 0f), Quaternion.identity);
-            }
-            else
-            {
-                Debug.Log("instance non alea");
-                Instantiate(pieceToSpawn, gameObject.transform.position, pieceToSpawn.transform.rotation);
-            }
-
+            Instantiate(pieceToSpawn, gameObject.transform.position, Quaternion.Euler(120f, 120f, 120f));
             JetonManager.instance.removeJeton(1);
         }
     }

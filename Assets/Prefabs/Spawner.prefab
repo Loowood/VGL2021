@@ -44,3 +44,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieceToSpawn: {fileID: 349617250564868780, guid: 5e6d7b2c28c11804b9a45837bc819828, type: 3}
+  posAleatoire: 0
+  leftestPos: -4
+  rightestPos: 4
+  moveRight: 1
+  speed: 1

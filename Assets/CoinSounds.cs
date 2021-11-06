@@ -20,6 +20,7 @@ public class CoinSounds : MonoBehaviour
                 counter++;
                 AudioSource.PlayClipAtPoint(getClipToplay(), target.transform.position, 0.5f);
                 Invoke(nameof(freeSoundUsage), soundCooldown);
+                //gameObject.transform.eulerAngles = new Vector3(90f, 90f, 90f);
             }
         }
     }
