@@ -22,6 +22,26 @@ public class SpawnPiece : MonoBehaviour
         maxLeftPosition = gameObject.transform.position.x + leftestPos;
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && JetonManager.instance.getNbJetons() > 0)
+        {
+            Debug.Log("space");
+            if (posAleatoire)
+            {
+                Debug.Log("instance alea");
+                Instantiate(pieceToSpawn, gameObject.transform.position + new Vector3(Random.Range(leftestPos, rightestPos), 0f, 0f), Quaternion.identity);
+            }
+            else
+            {
+                Debug.Log("instance non alea");
+                Instantiate(pieceToSpawn, gameObject.transform.position, pieceToSpawn.transform.rotation);
+            }
+
+            JetonManager.instance.removeJeton(1);
+        }
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -44,23 +64,6 @@ public class SpawnPiece : MonoBehaviour
         if (gameObject.transform.position.x < maxLeftPosition && !moveRight)
         {
             moveRight = true;
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space) && JetonManager.instance.getNbJetons() > 0)
-        {
-            Debug.Log("space");
-            if (posAleatoire)
-            {
-                Debug.Log("instance alea");
-                Instantiate(pieceToSpawn, gameObject.transform.position + new Vector3(Random.Range(leftestPos, rightestPos), 0f, 0f), Quaternion.identity);
-            }
-            else
-            {
-                Debug.Log("instance non alea");
-                Instantiate(pieceToSpawn, gameObject.transform.position, pieceToSpawn.transform.rotation);
-            }
-
-            JetonManager.instance.removeJeton(1);
         }
     }
 }
