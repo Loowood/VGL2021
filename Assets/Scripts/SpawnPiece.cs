@@ -5,6 +5,10 @@ using UnityEngine;
 public class SpawnPiece : MonoBehaviour
 {
     public GameObject pieceToSpawn;
+    public bool posAleatoire = true;
+
+    public float leftestPos = -3f;
+    public float rightestPos = 3f;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +21,12 @@ public class SpawnPiece : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(pieceToSpawn, gameObject.transform.position + new Vector3(Random.Range(-3f, 3f), 0f, 0f), Quaternion.identity);
+            if (posAleatoire) {
+                Instantiate(pieceToSpawn, gameObject.transform.position + new Vector3(Random.Range(leftestPos, rightestPos), 0f, 0f), Quaternion.identity);
+            } else
+            {
+                Instantiate(pieceToSpawn, gameObject.transform.position, Quaternion.identity);
+            }
         }
     }
 }

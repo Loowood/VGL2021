@@ -6,16 +6,10 @@ public class PusherMoves : MonoBehaviour
 {
     [SerializeField]
     bool advance = true;
-    public float baseChrono = 20;
-    float chrono;
     public float speed = 1.0f;
     Vector3 movingDirection;
-
-    private void Awake()
-    {
-        //rigidbody = gameObject.GetComponent<Rigidbody>();
-        chrono = baseChrono;
-    }
+    public float minPos;
+    public float maxPos;
 
     // Start is called before the first frame update
     void Start()
@@ -35,16 +29,13 @@ public class PusherMoves : MonoBehaviour
             movingDirection = Vector3.back;
         }
         gameObject.transform.Translate(movingDirection * speed * Time.deltaTime);
-        chrono -= Time.deltaTime;
-        if (gameObject.transform.position.z > -8 && advance)
+        if (gameObject.transform.position.z > maxPos && advance)
         {
             advance = false;
-            chrono = baseChrono;
         }
-        if (gameObject.transform.position.z < -13 && !advance)
+        if (gameObject.transform.position.z < minPos && !advance)
         {
             advance = true;
-            chrono = baseChrono;
         }
     }
 }
