@@ -10,6 +10,8 @@ public class JetonManager : MonoBehaviour
 	private int nbJetons;
 	public Text jetonsText;
 
+	public int jetonsPerCoin = 10;
+
 	void Awake()
 	{
 		if (instance != null)
@@ -25,7 +27,7 @@ public class JetonManager : MonoBehaviour
 
     private void Start()
     {
-		nbJetons = 20;
+		nbJetons = 0;
 		jetonsText.text = nbJetons + " jetons";
     }
 
@@ -52,5 +54,11 @@ public class JetonManager : MonoBehaviour
 	public int getNbJetons()
     {
 		return nbJetons;
+    }
+
+	// Pièces
+	public void insertCoin()
+    {
+		addJeton(jetonsPerCoin);
     }
 }
