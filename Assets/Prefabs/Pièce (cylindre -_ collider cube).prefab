@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3469667539296576980}
   - component: {fileID: 6918061428068222856}
   - component: {fileID: 5440049025048768010}
+  - component: {fileID: 5480283262092731101}
   m_Layer: 0
   m_Name: "Pi\xE8ce (cylindre -_ collider cube)"
   m_TagString: Coin
@@ -113,3 +114,20 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &5480283262092731101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349617250564868780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 987146fda9981e74b81d195d4c8fa540, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClipsForCoinsCollide:
+  - {fileID: 8300000, guid: be66292e8b3aaa74ca94d9674f5cf935, type: 3}
+  - {fileID: 8300000, guid: cc5284042dd530944ae57fd3e784f81f, type: 3}
+  - {fileID: 8300000, guid: 1147a85a20519a844b514eb57b112896, type: 3}
+  - {fileID: 8300000, guid: d6d51fa09df92834883867a42e68090c, type: 3}

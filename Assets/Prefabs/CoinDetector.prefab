@@ -108,3 +108,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfc56e9d18fdeb5489a09cb536cf6676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyCoinDelay: 2
+  audioClipsForCoinsPickUp:
+  - {fileID: 8300000, guid: d7286f45d181dba4d8761fa54e6c6cb9, type: 3}
