@@ -1784,6 +1784,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2174241362204012367, guid: 3800d4c2ccba2a44b870bcfec1c36fa8, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 2174241362204012367, guid: 3800d4c2ccba2a44b870bcfec1c36fa8, type: 3}
       propertyPath: m_Name
       value: Spawner
       objectReference: {fileID: 0}
@@ -2256,7 +2260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d65423b6d473cb419e13c3dfd989440, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nbJetons: 0
+  nbJetons: 100
   jetonsText: {fileID: 1869903172}
   jetonsPerCoin: 10
 --- !u!4 &1601192905 stripped

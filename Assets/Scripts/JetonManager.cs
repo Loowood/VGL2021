@@ -27,7 +27,7 @@ public class JetonManager : MonoBehaviour
 
     private void Start()
     {
-		nbJetons = 0;
+		nbJetons = 10;
 		jetonsText.text = nbJetons + " jetons";
     }
 
