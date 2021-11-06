@@ -19,14 +19,18 @@ public class SpawnPiece : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && JetonManager.instance.getNbJetons() > 0)
         {
-            if (posAleatoire) {
-                Instantiate(pieceToSpawn, gameObject.transform.position + new Vector3(Random.Range(leftestPos, rightestPos), 0f, 0f), Quaternion.identity);
-            } else
+            if (posAleatoire)
             {
-                Instantiate(pieceToSpawn, gameObject.transform.position, Quaternion.identity);
+                Instantiate(pieceToSpawn, gameObject.transform.position + new Vector3(Random.Range(leftestPos, rightestPos), 0f, 0f), Quaternion.identity);
             }
+            else
+            {
+                Instantiate(pieceToSpawn, gameObject.transform.position, pieceToSpawn.transform.rotation);
+            }
+
+            JetonManager.instance.removeJeton(1);
         }
     }
 }
