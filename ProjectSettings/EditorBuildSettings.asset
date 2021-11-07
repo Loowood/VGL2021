@@ -12,6 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/CastleScene.unity
     guid: ef2242c027ddc1a44802e0e2064081e9
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: bf254b0d4478cf740be8ac42c412dfeb
+  - enabled: 1
+    path: Assets/Scenes/CastleScene.unity
+    guid: ef2242c027ddc1a44802e0e2064081e9
+  - enabled: 1
     path: Assets/Scenes/WaterfallScene.unity
     guid: 057b3b58d72551e42876fd3908ca53a3
   m_configObjects: {}

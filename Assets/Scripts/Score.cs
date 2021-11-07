@@ -16,4 +16,9 @@ public class Score : MonoBehaviour
     {
         return score;
     }
+
+    public static void razScore()
+    {
+        score = 0;
+    }
 }

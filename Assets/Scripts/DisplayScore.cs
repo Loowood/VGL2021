@@ -10,6 +10,11 @@ public class DisplayScore : MonoBehaviour
     public string scoreSufix = "pts";
     public int objectif = 15;
 
+    private void Start()
+    {
+        Score.razScore();
+    }
+
     // Update is called once per frame
     void Update()
     {

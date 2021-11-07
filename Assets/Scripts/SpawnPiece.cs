@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawnPiece : MonoBehaviour
 {
     public GameObject pieceToSpawn;
+    public JetonManager JetonManager;
     public float leftestPos = -4f;
     public float rightestPos = 4f;
     public bool moveRight = true;
@@ -12,6 +13,9 @@ public class SpawnPiece : MonoBehaviour
     Vector3 movingDirection;
     float maxRightPosition;
     float maxLeftPosition;
+
+    public GameObject commandHelper;
+    public bool showHelper = true;
 
     // Start is called before the first frame update
     void Start()
@@ -22,10 +26,16 @@ public class SpawnPiece : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && JetonManager.instance.getNbJetons() > 0)
+        if (Input.GetKeyDown(KeyCode.Space) && JetonManager.getNbJetons() > 0)
         {
+            if (showHelper)
+            {
+                commandHelper.SetActive(false);
+                showHelper = false;
+            }
+
             Instantiate(pieceToSpawn, gameObject.transform.position, Quaternion.Euler(120f, 120f, 120f));
-            JetonManager.instance.removeJeton(1);
+            JetonManager.removeJeton(1);
         }
     }
 

@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class JetonManager : MonoBehaviour
 {
-	public static JetonManager instance;
 	[SerializeField]
 	private int nbJetons;
 	public Text jetonsText;
@@ -13,19 +12,6 @@ public class JetonManager : MonoBehaviour
 	public int jetonsPerCoin = 10;
 
 	public GameObject insertCoinBtn;
-
-	void Awake()
-	{
-		if (instance != null)
-		{
-			Destroy(gameObject);
-		}
-		else
-		{
-			instance = this;
-			DontDestroyOnLoad(gameObject);
-		}
-	}
 
     private void Start()
     {
