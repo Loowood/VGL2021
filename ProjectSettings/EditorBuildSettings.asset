@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WaterfallScene.unity
     guid: 057b3b58d72551e42876fd3908ca53a3
+  - enabled: 1
+    path: Assets/Scenes/LoadingScene.unity
+    guid: b986c3c45a286fd4b82b9a992bcf2916
   m_configObjects: {}

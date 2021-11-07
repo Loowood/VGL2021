@@ -7,7 +7,7 @@ public class MenuNavigation : MonoBehaviour
 {
     public GameObject mainMenu;
     public GameObject levelMenu;
-
+    public NextScene nextScene;
     private void Awake()
     {
         ShowMainMenu();
@@ -33,11 +33,13 @@ public class MenuNavigation : MonoBehaviour
 
     public void LoadCastle()
     {
-        SceneManager.LoadScene("CastleScene", LoadSceneMode.Single);
+        nextScene.nextSceneName = "CastleScene";
+        SceneManager.LoadScene("LoadingScene", LoadSceneMode.Single);
     }
 
     public void LoadWaterFall()
     {
-        SceneManager.LoadScene("WaterFallScene", LoadSceneMode.Single);
+        nextScene.nextSceneName = "WaterFallScene";
+        SceneManager.LoadScene("LoadingScene", LoadSceneMode.Single);
     }
 }

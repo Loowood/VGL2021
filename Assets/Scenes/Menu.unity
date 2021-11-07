@@ -1917,6 +1917,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenu: {fileID: 159078344}
   levelMenu: {fileID: 277385369}
+  nextScene: {fileID: 11400000, guid: da010bc5ffae81947a4b7c376361a3ef, type: 2}
 --- !u!4 &2020152788
 Transform:
   m_ObjectHideFlags: 0
