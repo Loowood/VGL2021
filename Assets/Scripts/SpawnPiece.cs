@@ -13,6 +13,9 @@ public class SpawnPiece : MonoBehaviour
     float maxRightPosition;
     float maxLeftPosition;
 
+    public GameObject commandHelper;
+    public bool showHelper = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +27,12 @@ public class SpawnPiece : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && JetonManager.instance.getNbJetons() > 0)
         {
+            if (showHelper)
+            {
+                commandHelper.SetActive(false);
+                showHelper = false;
+            }
+
             Instantiate(pieceToSpawn, gameObject.transform.position, Quaternion.Euler(120f, 120f, 120f));
             JetonManager.instance.removeJeton(1);
         }
