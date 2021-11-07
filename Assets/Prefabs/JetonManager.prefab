@@ -44,3 +44,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nbJetons: 500
+  jetonsText: {fileID: 0}
+  jetonsPerCoin: 50

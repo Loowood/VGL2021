@@ -12,6 +12,8 @@ public class JetonManager : MonoBehaviour
 
 	public int jetonsPerCoin = 10;
 
+	public GameObject insertCoinBtn;
+
 	void Awake()
 	{
 		if (instance != null)
@@ -27,28 +29,32 @@ public class JetonManager : MonoBehaviour
 
     private void Start()
     {
-		nbJetons = 10;
-		jetonsText.text = nbJetons + " jetons";
+		insertCoinBtn.SetActive(false);
+		nbJetons = jetonsPerCoin;
+		jetonsText.text = nbJetons + " coins";
     }
 
     public void addJeton(int nb)
     {
 		nbJetons += nb;
-		jetonsText.text = nbJetons + " jetons";
+		jetonsText.text = nbJetons + " coins";
 	}
 
 	public void removeJeton(int nb)
     {
 		nbJetons -= nb;
-		if (nbJetons < 0)
+		if (nbJetons <= 0)
+		{
 			nbJetons = 0;
-		jetonsText.text = nbJetons + " jetons";
+			insertCoinBtn.SetActive(true);
+		}
+		jetonsText.text = nbJetons + " coins";
 	}
 
 	public void setNbJetons(int nb)
     {
 		nbJetons = nb;
-		jetonsText.text = nbJetons + " jetons";
+		jetonsText.text = nbJetons + " coins";
 	}
 
 	public int getNbJetons()
@@ -60,5 +66,6 @@ public class JetonManager : MonoBehaviour
 	public void insertCoin()
     {
 		addJeton(jetonsPerCoin);
+		insertCoinBtn.SetActive(false);
     }
 }
